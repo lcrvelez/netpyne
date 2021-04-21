@@ -64,7 +64,8 @@ def getbandpass(lfps, sampr, minf=0.05, maxf=300):
     """
 
     datband = []
-    for i in range(len(lfps[0])):datband.append(bandpass(lfps[:,i], minf, maxf, df=sampr, zerophase=True))
+    for i in range(len(lfps[0])):
+        datband.append(bandpass(lfps[:,i], minf, maxf, df=sampr, zerophase=True))
 
     datband = np.array(datband)
 
